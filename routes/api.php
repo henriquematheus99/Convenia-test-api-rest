@@ -19,16 +19,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::namespace('API')->name('api.')->group(function()
 {
-    Route::prefix('empresas')->group(function()
+    Route::prefix('companies')->group(function()
     {
 
-        Route::get('/', 'EmpresaController@index')->name('all_empresas');
-        Route::get('/{id}', 'EmpresaController@show')->name('single_empresas');
+        Route::get('/', 'CompanyController@index')->name('all_companies');
+        Route::get('/{id}', 'CompanyController@show')->name('single_companies');
 
-        Route::post('/', 'EmpresaController@store')->name('save_empresa');
-        Route::put('/{id}', 'EmpresaController@update')->name('update_empresa');
+        Route::post('/', 'CompanyController@store')->name('save_companies');
+        Route::put('/{id}', 'CompanyController@update')->name('update_companies');
 
-        Route::delete('/{id}', 'EmpresaController@delete')->name('delete_empresa');
+        Route::delete('/{id}', 'CompanyController@delete')->name('delete_companies');
 
     });
 });

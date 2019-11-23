@@ -2,15 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
-class EmpresaTableSeeder extends Seeder
+class CompanyTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        factory(\App\Empresa::class, 10)->create(); 
+        factory(\App\Company::class, 10)->create();
     }
 }

@@ -13,10 +13,10 @@ class CreateTableEmpresas extends Migration
      */
     public function up()
     {
-        Schema::create('empresas', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Nome');
-            $table->string('Telefone');
+            $table->string('Name');
+            $table->string('telephone');
             $table->string('CEP');
             $table->string('CNPJ'); 
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateTableEmpresas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empresas');
+        Schema::dropIfExists('companies');
     }
 }
